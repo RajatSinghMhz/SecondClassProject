@@ -1,3 +1,6 @@
+# Now we know about class and objects, lets use some of it
+# We have to know that each class has certain attributes that defines the property of the class
+# Make first letter of Class capital, not mandatory but easy to understand it is not just any function but is a class
 class Cars:
     wheel = 4
     seatbelt = True
@@ -5,12 +8,11 @@ class Cars:
     company = ""
 
     print("__________________________________________________")
-
-    ###########Constructor
+# Constructor of Class
     def __init__(self, a, b):
         self.color = a
         self.company = b
-
+# Here, __init__ is used to assign values to particular attribute of the class
 
 jeep = Cars("Green", "JeepUS")
 print(jeep.color)
@@ -93,22 +95,29 @@ print(subtraction)
 print(multiplication)
 print(division)
 
+
 ######################## Inheritance
 class Father:
-    caste="Shrestha"
-    def __init__(self,name):
-        self.name=name
+    caste = "Shrestha"
+
+    def __init__(self, name):
+        self.name = name
 
     def fatherfunction(self):
         print(f"Hello, I am the father of {self.name}")
+
+
 class Children(Father):
-    gender=""
-    name=""
-    def __init__(self,gender,name):
-        self.gender=gender
+    gender = ""
+    name = ""
+
+    def __init__(self, gender, name):
+        self.gender = gender
         super().__init__(name)
 
     def childFunction(self):
         print("Hello I am child")
-c1=Children("Boy","Ram")
-print (c1.fatherfunction())
+
+
+c1 = Children("Boy", "Ram")
+print(c1.fatherfunction())
