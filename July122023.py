@@ -1,33 +1,33 @@
-# #WAP to check if a given number is multiple of 3 or not, if multiple of 3 print Fizz
-# checkMul=int(input("Please enter a number"))
-# if checkMul%3==0:
-#     print("Fizz")
-# elif checkMul==0 or checkMul%3!=0:
-#     print("Not a multiple of 3")
-#
-# print("_______________")
-#
-# #WAP above for 5
-# checkMuls=int(input("Please enter a number"))
-# if checkMuls%5==0:
-#     print("Buzz")
-# elif checkMul==0 or checkMul%3!=0:
-#     print("Not a multiple of 3")
-#
-# print("_______________")
-#
-# #WAP to print multiple of 3 and 5
-# checkMulz=int(input("Please enter a number"))
-# if checkMulz%3==0 and checkMulz%5==0:
-#     print("FizzBuzz")
-# elif checkMulz%3==0:
-#     print("Fizz")
-# elif checkMulz%5==0:
-#     print("Buzz")
-# else:
-#     print(checkMulz)
-#
-# print("_______________")
+#WAP to check if a given number is multiple of 3 or not, if multiple of 3 print Fizz
+checkMul=int(input("Please enter a number"))
+if checkMul%3==0:
+    print("Fizz")
+elif checkMul==0 or checkMul%3!=0:
+    print("Not a multiple of 3")
+
+print("_______________")
+
+#WAP above for 5
+checkMuls=int(input("Please enter a number"))
+if checkMuls%5==0:
+    print("Buzz")
+elif checkMul==0 or checkMul%3!=0:
+    print("Not a multiple of 3")
+
+print("_______________")
+
+#WAP to print multiple of 3 and 5
+checkMulz=int(input("Please enter a number"))
+if checkMulz%3==0 and checkMulz%5==0:
+    print("FizzBuzz")
+elif checkMulz%3==0:
+    print("Fizz")
+elif checkMulz%5==0:
+    print("Buzz")
+else:
+    print(checkMulz)
+
+print("_______________")
 
 #WAP to ask user with a amount and display how many Bills of each notes
 #Examples 1560=1000+500+50+10

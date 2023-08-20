@@ -1,26 +1,47 @@
-class Animal:
-    def __init__(self, name):
+class Individual:
+    def __init__(self, name, age):
         self.name = name
+        self.age = age
 
-    def make_sounds(self):
-        return "Some generic sound"
+    def __str__(self):
+        return f"{self.name}, of age {self.age}"
 
-class Dog(Animal):
-    def make_sound(self):
-        return "Woof! Woof!"
 
-class Cat(Animal):
-    def make_sound(self):
-        return "Meow"
+class Employee(Individual):
+    def __init__(self, name, age, grade):
+        super().__init__(name, age)
+        self.grade = grade
 
-# Create instances of subclasses
-dog = Dog("Buddy")
-cat = Cat("Whiskers")
+    def __str__(self):
+        return super().__str__() + f", Grade is {self.grade}"
 
-# Access methods from superclass
-print(dog.name)          # Output: Buddy
-print(cat.make_sounds())  # Output: Meow
 
-# Access overridden method in subclasses
-print(dog.make_sound())  # Output: Woof! Woof!
-print(cat.make_sound())  # Output: Meow
+class Instructor(Individual):
+    def __init__(self, name, age, topic):
+        super().__init__(name, age)
+        self.topic = topic
+
+    def __str__(self):
+        return super().__str__() + f", instructs: {self.topic}"
+
+
+class MarkingCriteria:
+    def __init__(self, criteria, instructor, employee):
+        self.criteria = criteria
+        self.employee = employee
+        self.instructor = instructor
+
+    def __str__(self):
+        return f"{self.criteria} evaluated by {self.instructor} for employee {self.employee} "
+
+employee1 = Employee("Rajat", 27, "A+")
+employee2 = Employee("Zenith", 30, "B+")
+
+instructor1 = Instructor("Prakash G", 35, "Etabs")
+instructor2 = Instructor("Prayush S", 32, "Python")
+
+markingCriteria1 = MarkingCriteria("Expertise and Speed", instructor1, [employee1, employee2])
+markingCriteria2 = MarkingCriteria("Logic and Accuracy", instructor2, employee1)
+
+print(markingCriteria1)
+print(markingCriteria2)
